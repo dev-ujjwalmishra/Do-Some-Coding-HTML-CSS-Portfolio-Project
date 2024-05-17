@@ -1,0 +1,492 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+@keyframes typewriter{
+    from{width: 0%;}
+    to{width: 80%;}
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+
+header{
+    padding: 0 1.5rem;
+    background-color: rgb(51, 121, 164);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.logo{
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+nav ul li a{
+    font-size: 1.9rem;
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease-in;
+    padding-bottom: 2px;
+
+}
+
+nav ul li a:hover{
+    border-bottom: 2px solid white;
+    transition: 0.2s ease-in;
+}
+
+
+/* hero */
+
+.hero{
+    padding: 2.5rem 1.5rem;
+    background-color: rgb(22, 66, 94);
+}
+
+.hero-container{
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+
+.hero-img img{
+    width: 380px;
+}
+
+
+.hero-content h1{
+    font-size: 5rem;
+    color: white;
+}
+
+.yellow-txt{
+    color: rgb(252, 252, 72);
+}
+
+.lg-txt{
+    font-size: 8rem;
+}
+
+.hero ~ hr{
+    border: 3px solid rgb(51, 121, 164);
+}
+
+/* projects */
+
+.projects{
+    background-color: rgb(11, 61, 92);
+    padding: 3rem 1.5rem;
+}
+
+.projects .container h2{
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+    margin: 4rem 0;
+}
+
+.projects-container{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+    gap: 3rem 2rem;
+    margin-bottom: 7rem;
+}
+
+.project{
+    /* height: 425px; */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+}
+
+.project:hover{
+    transform: scale(1.08);
+    transition: 0.3s ease-in;
+}
+
+.project-img img{
+    display: block;
+    width: 100%;
+    transition: 0.3s ease-in;
+}
+
+.project:hover .project-img img{
+    transform: scale(1.05);
+    transition: 0.3s ease-in;
+}
+
+.project-title{
+    background-color: rgba(22, 66, 94,0.9);
+    /* background-color: red; */
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -122px;
+    width: 100%;
+    transition: 0.4s ease-in;
+}
+
+/* to make title animate */
+
+.project:hover .project-title{
+    transition: 0.4s ease-in;
+    bottom: 0;
+}
+
+.project-title h3 a{
+    display: block;
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    transition: 0.2s ease-in;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.project-title h3 a:hover{
+    border-bottom: 2px solid white;
+    transition: 0.2s ease-in;
+}
+
+/* work */
+
+.work{
+    background-color: rgb(22, 66, 94);
+    padding: 7rem 1.5rem;
+}
+
+.work-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.work-container h2{
+    font-size: 6rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.social-links{
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.links-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link{
+   padding-right: 2rem;
+}
+
+.link a{
+    font-size: 2.2rem;
+    color: white;
+    transition: 0.2s ease-in;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+
+.link a:hover{
+    transition: 0.2s ease-in;
+    border-bottom: 2px solid white;
+}
+
+
+/* footer */
+
+footer{
+    background-color: rgb(11, 61, 92);
+    padding: 3rem 1.5rem;
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+/* responsive code */
+
+@media(max-width: 1053px){
+    @keyframes typewriter{
+        from{width: 0%;}
+        to{width: 85%;}
+    }
+
+    .hero-img img {
+        width: 300px;
+    }
+
+    .hero-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .lg-txt {
+        font-size: 6.6rem;
+    }
+
+
+
+    .projects .container h2{
+        font-size: 5rem;
+    }
+
+
+    .project-title h3 a {
+        font-size: 2.2rem
+    }
+    
+    
+    .work-container h2 {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .work-container h2 {
+        font-size: 5rem;
+    }
+
+    footer p{
+        font-size: 2rem;
+    }
+
+}
+
+@media(max-width: 877px){
+
+    @keyframes typewriter{
+        from{width: 0%;}
+        to{width: 90%;}
+    }
+
+    .logo{
+        font-size: 2.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1.7rem;
+    }
+
+    .hero-img img {
+        width: 250px;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .lg-txt {
+        font-size: 5.5rem;
+    }
+
+
+
+    .projects .container h2{
+        font-size: 4rem;
+    }
+
+
+    .project-title h3 a {
+        font-size: 2rem
+    }
+    
+    
+    .work-container h2 {
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .fa-brands, .fa-solid{
+        font-size: 2rem;
+    }
+
+    .link a {
+        font-size: 1.8rem;
+    }
+
+    footer p{
+        font-size: 1.8rem;
+    }
+}
+
+@media(max-width: 743px){
+    .hero-container {
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media(max-width: 559px){
+    @keyframes typewriter{
+        from{width: 0%;}
+        to{width: 95%;}
+    }
+    .logo{
+        font-size: 2.2rem;
+    }
+
+    nav ul{
+        gap: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1.6rem;
+    }
+
+    .hero-img img {
+        width: 200px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .lg-txt {
+        font-size: 4.5rem;
+    }
+
+
+
+    .projects .container h2{
+        font-size: 3.5rem;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 4rem 1.8rem;
+        place-items: center;
+        margin-bottom: 4rem;
+    }
+
+    .project{
+        width: 85%;
+    }
+
+    .project-title{
+        min-height: 90px;
+    }
+
+    .project-title h3 a {
+        font-size: 1.9rem
+    }
+    
+    
+    .work-container h2 {
+        font-size: 3.5rem;
+        margin-bottom: 0.2rem;
+        text-align: center;
+    }
+
+    .fa-brands, .fa-solid{
+        font-size: 1.9rem;
+    }
+
+    .link a {
+        font-size: 1.6rem;
+    }
+
+}
+
+
+/* animations for hero section such as sliding image to right and typewritter writting effect */
+
+
+/* slide image animation */
+.hero-img{
+    transform: translateX(0%);
+    animation: image-slide 0.5s ease-in forwards;
+}
+
+@keyframes image-slide {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+/* appear animation for lower screen size */
+
+@media (max-width: 743px){
+    .hero-img{
+        animation: appear 1s ease-in normal;
+    }
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+/* writting effect */
+.writting-effect{
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    /* width: 100%; */
+    border-right: 2px solid orange;
+    animation: typewriter 2s steps(50) 1 forwards, blinkTextCursor 700ms steps(50) infinite forwards;
+
+}
+
+
+@keyframes blinkTextCursor{
+    from{border-right-color: red;}
+    to{border-right-color: transparent;}
+}
